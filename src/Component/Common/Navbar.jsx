@@ -1,20 +1,27 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
-
-const navLinks = [
-  { label: 'Curriculum', to: '/' },
-  { label: 'Methodology', to: '/methodology' },
-  { label: 'Success Stories', to: '/success-stories' },
-  { label: 'Pricing', to: '/pricing' },
-];
-
-const getNavLinkClass = ({ isActive }) => {
-  const base = 'whitespace-nowrap border-b-2 px-0 pb-1.5 pt-2 text-sm font-semibold leading-none no-underline transition-colors';
-  if (isActive) return `${base} border-[#005fc9] text-[#005fc9]`;
-  return `${base} border-transparent text-[#42516a] hover:text-[#005fc9]`;
-};
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
+  const navLinks = [
+    { label: t('Home'), to: '/' },
+    { label: t('Methodology'), to: '/methodology' },
+    { label: t('Success Stories'), to: '/success-stories' },
+    { label: t('Pricing'), to: '/pricing' },
+  ];
+
+  const getNavLinkClass = ({ isActive }) => {
+    const base = 'whitespace-nowrap border-b-2 px-0 pb-1.5 pt-2 text-sm font-semibold leading-none no-underline transition-colors';
+    if (isActive) return `${base} border-[#005fc9] text-[#005fc9]`;
+    return `${base} border-transparent text-[#42516a] hover:text-[#005fc9]`;
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <header className="mx-auto flex max-w-7xl flex-col gap-4 bg-[#f7f7f7] px-4 py-4 font-sans sm:px-6 lg:grid lg:min-h-14 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-0 lg:px-8 lg:py-3">
       <Link
@@ -41,12 +48,26 @@ const Navbar = () => {
         ))}
       </nav>
 
-      <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:self-center lg:justify-self-end">
+      <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:self-center lg:justify-self-end lg:items-center lg:gap-3">
+        <div className="flex gap-2">
+          <button
+            onClick={() => changeLanguage('en')}
+            className={`px-3 py-1 text-sm font-medium rounded ${i18n.language === 'en' ? 'bg-[#075bbf] text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => changeLanguage('bn')}
+            className={`px-3 py-1 text-sm font-medium rounded ${i18n.language === 'bn' ? 'bg-[#075bbf] text-white' : 'bg-gray-200 text-gray-700'}`}
+          >
+            BN
+          </button>
+        </div>
         <Link
           to="/login"
           className="w-full whitespace-nowrap rounded-full border border-[#075bbf] px-5 py-2.5 text-center text-sm font-medium leading-none text-[#075bbf] no-underline transition-colors hover:bg-[#eaf2ff] sm:w-auto"
         >
-          Login
+          {t('Login')}
         </Link>
 
         <Link

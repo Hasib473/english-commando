@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const steps = [
   { label: '\u09a4\u09a5\u09cd\u09af', icon: 'a', active: true },
@@ -209,13 +210,13 @@ const Enrollmanet = () => {
               </button>
             </div>
 
-            <button
-              type="button"
+            <Link
+              to='/dashboard'
               className="mt-6 flex h-16 w-full items-center justify-center gap-3 rounded-xl bg-[#075bbf] text-base font-black text-white shadow-[0_8px_16px_rgba(7,91,191,0.22)] transition-colors hover:bg-[#064fa7]"
             >
               {labels.pay}
               <span aria-hidden="true">{'\u2192'}</span>
-            </button>
+            </Link>
 
             <div className="mt-10 flex items-center gap-3">
               <div className="flex -space-x-2">

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -23,11 +25,11 @@ const Login = () => {
   return (
     <main className="min-h-[60vh] bg-[#f8f9ff] px-4 py-16 font-sans text-[#082447] sm:px-8">
       <div className="mx-auto max-w-md rounded-2xl border border-[#dce9f7] bg-white p-8 shadow-sm">
-        <h1 className="text-3xl font-black text-center mb-6">লগইন</h1>
+        <h1 className="text-3xl font-black text-center mb-6">{t('Login')}</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              ইমেইল
+              {t('Email')}
             </label>
             <input
               type="email"
@@ -41,7 +43,7 @@ const Login = () => {
           </div>
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-              পাসওয়ার্ড
+              {t('Password')}
             </label>
             <div className="relative">
               <input
@@ -73,14 +75,14 @@ const Login = () => {
           </div>
           <div className="flex justify-between items-center">
             <Link to="/forgot-password" className="text-sm text-blue-600 hover:text-blue-800">
-              পাসওয়ার্ড ভুলে গেছেন?
+              {t('Forgot Password?')}
             </Link>
           </div>
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            লগইন
+            {t('Login')}
           </button>
         </form>
         <div className="mt-6">
@@ -102,13 +104,13 @@ const Login = () => {
               <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
               <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
-            Google দিয়ে লগইন
+            Google {t('Login')}
           </button>
         </div>
         <p className="mt-6 text-center text-sm text-gray-600">
-          অ্যাকাউন্ট নেই?{' '}
-          <Link to="/enrollment" className="text-blue-600 hover:text-blue-800 font-medium">
-            সাইন আপ করুন
+          {t("Don't have an account?")}{' '}
+          <Link to="/signup" className="text-blue-600 hover:text-blue-800 font-medium">
+            {t('Sign Up')}
           </Link>
         </p>
       </div>
