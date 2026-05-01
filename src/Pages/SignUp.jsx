@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router';
-import { useTranslation } from 'react-i18next';
 
 const SignUp = () => {
-    const { t } = useTranslation();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,29 +12,29 @@ const SignUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
-            alert(t('Passwords do not match'));
+            alert('Passwords do not match');
             return;
         }
         // Handle sign up logic here
         console.log('Sign up attempt:', { name, email, password });
         // For now, just alert
-        alert(t('Sign up functionality to be implemented'));
+        alert('Sign up functionality to be implemented');
     };
 
     const handleGoogleSignUp = () => {
         // Handle Google sign up logic here
         console.log('Google sign up clicked');
-        alert(t('Sign up with Google') + ' to be implemented');
+        alert('Sign up with Google to be implemented');
     };
 
     return (
         <main className="min-h-[60vh] bg-[#f8f9ff] px-4 py-16 font-sans text-[#082447] sm:px-8">
             <div className="mx-auto max-w-md rounded-2xl border border-[#dce9f7] bg-white p-8 shadow-sm">
-                <h1 className="text-3xl font-black text-center mb-6">{t('Sign Up')}</h1>
+                <h1 className="text-3xl font-black text-center mb-6">Sign Up</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                            {t('Name')}
+                            Name
                         </label>
                         <input
                             type="text"
@@ -45,12 +43,12 @@ const SignUp = () => {
                             onChange={(e) => setName(e.target.value)}
                             required
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="আপনার নাম লিখুন"
+                            placeholder="Enter your name"
                         />
                     </div>
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                            {t('Email')}
+                            Email
                         </label>
                         <input
                             type="email"
@@ -59,12 +57,12 @@ const SignUp = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="আপনার ইমেইল লিখুন"
+                            placeholder="Enter your email"
                         />
                     </div>
                     <div>
                         <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                            {t('Password')}
+                            Password
                         </label>
                         <div className="relative">
                             <input
@@ -74,7 +72,7 @@ const SignUp = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                                 className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="আপনার পাসওয়ার্ড লিখুন"
+                                placeholder="Enter your password"
                             />
                             <button
                                 type="button"
@@ -96,7 +94,7 @@ const SignUp = () => {
                     </div>
                     <div>
                         <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
-                            {t('Confirm Password')}
+                            Confirm Password
                         </label>
                         <div className="relative">
                             <input
@@ -106,7 +104,7 @@ const SignUp = () => {
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                 required
                                 className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                placeholder="পাসওয়ার্ড আবার লিখুন"
+                                placeholder="Confirm your password"
                             />
                             <button
                                 type="button"
@@ -130,7 +128,7 @@ const SignUp = () => {
                         type="submit"
                         className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                        {t('Sign Up')}
+                        Sign Up
                     </button>
                 </form>
                 <div className="mt-6">
@@ -139,7 +137,7 @@ const SignUp = () => {
                             <div className="w-full border-t border-gray-300" />
                         </div>
                         <div className="relative flex justify-center text-sm">
-                            <span className="px-2 bg-white text-gray-500">অথবা</span>
+                            <span className="px-2 bg-white text-gray-500">or</span>
                         </div>
                     </div>
                     <button
@@ -152,13 +150,13 @@ const SignUp = () => {
                             <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                         </svg>
-                        Google {t('Sign Up')}
+                        Google Sign Up
                     </button>
                 </div>
                 <p className="mt-6 text-center text-sm text-gray-600">
-                    {t('Have an account?')}{' '}
+                    Have an account?{' '}
                     <Link to="/login" className="text-blue-600 hover:text-blue-800 font-medium">
-                        {t('Login')}
+                        Login
                     </Link>
                 </p>
             </div>

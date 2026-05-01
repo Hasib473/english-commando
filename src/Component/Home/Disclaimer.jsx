@@ -7,7 +7,7 @@ const message =
 
 const Disclaimer = () => {
   return (
-    <section className="bg-[#f8f9ff] px-4 py-14 font-sans sm:px-8">
+    <section className="bg-[#e2f2fc] px-4 py-14 font-sans sm:px-8">
       <div className="mx-auto max-w-5xl rounded-3xl border border-[#ffb8b8] bg-[#fff3f3] px-6 py-10 text-center shadow-[0_8px_18px_rgba(248,113,113,0.08)] sm:px-10">
         <svg
           viewBox="0 0 64 64"

@@ -8,7 +8,7 @@ const valueText =
 
 const Bonus = () => {
   return (
-    <section className="bg-white px-4 py-16 font-sans sm:px-8 sm:py-24">
+    <section className="bg-[#e2f2fc] px-4 py-16 font-sans sm:px-8 sm:py-24">
       <div className="mx-auto max-w-6xl rounded-3xl border border-[#dce9f7] bg-white px-6 py-8 shadow-[0_18px_34px_rgba(15,23,42,0.12)] sm:px-10 lg:px-16">
         <div className="grid items-center gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
           <div className="flex justify-center rounded-[1.75rem] bg-[#eef6ff] px-8 py-10 shadow-[0_0_70px_rgba(61,183,255,0.28)]">

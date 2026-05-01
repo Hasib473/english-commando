@@ -20,7 +20,7 @@ const avatars = [
 
 const Join = () => {
   return (
-    <section id="enroll" className="bg-[#eef6ff] px-4 py-16 font-sans sm:px-8 sm:py-20">
+    <section id="enroll" className="bg-[#e2f2fc] px-4 py-16 font-sans sm:px-8 sm:py-20">
       <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
         <h2 className="max-w-3xl text-4xl font-black leading-tight tracking-normal text-[#082447] sm:text-5xl lg:text-6xl">
           {title}

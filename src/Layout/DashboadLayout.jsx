@@ -20,7 +20,7 @@ export default function DashboardLayout() {
       {/* Page content */}
       <main className="ml-[20%] pt-[60px] p-7">
         <Outlet />
-        <Dfooter />
+        
       </main>
     </div>
   );

@@ -74,7 +74,7 @@ const CardIcon = ({ type }) => {
 
 const Card = () => {
   return (
-    <section className="bg-white px-4 py-14 font-sans sm:px-8 sm:py-20">
+    <section className="bg-[#e2f2fc] px-4 py-14 font-sans sm:px-8 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {cards.map((card) => (
           <article

@@ -13,7 +13,7 @@ const featureTwo = 'QR \u09ad\u09c7\u09b0\u09bf\u09ab\u09be\u0987\u09a1';
 
 const Cirtificate = () => {
   return (
-    <section className="bg-[#f8f9ff] px-4 py-16 font-sans sm:px-8 sm:py-24">
+    <section className="bg-[#e2f2fc] px-4 py-16 font-sans sm:px-8 sm:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
         <div className="text-center lg:text-left">
           <h2 className="max-w-xl text-4xl font-black leading-tight tracking-normal text-[#082447] sm:text-5xl lg:text-[3.35rem]">

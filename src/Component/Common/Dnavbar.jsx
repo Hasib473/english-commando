@@ -8,7 +8,7 @@ export default function Dnavbar() {
   const [search, setSearch] = useState("");
 
   return (
-    <nav className="w-full bg-white shadow-md rounded-xl px-5 flex items-center h-[60px] gap-6 max-w-5xl mx-auto">
+    <nav className="max-w-7xl mx-auto bg-white shadow-md  px-5 flex items-center h-[60px] gap-6 max-w-5xl mx-auto">
       {/* Logo */}
       <a href="#" className="flex items-center shrink-0">
         <img src={logo} alt="English Commando logo" className="w-20 h-20 object-contain" />

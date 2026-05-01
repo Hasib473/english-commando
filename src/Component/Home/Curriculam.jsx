@@ -62,7 +62,7 @@ const LessonIcon = ({ status }) => {
 
 const Curriculam = () => {
   return (
-    <section id="curriculum" className="bg-[#f8f9ff] px-4 py-16 font-sans sm:px-8 sm:py-24">
+    <section id="curriculum" className="bg-[#e2f2fc] px-4 py-16 font-sans sm:px-8 sm:py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-4xl font-black leading-tight tracking-normal text-[#082447] sm:text-5xl">
           {sectionTitle}

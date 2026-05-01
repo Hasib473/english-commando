@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../../assets/logo.png';
 const footerLinks = [
   "Terms of Service",
   "Privacy Policy",
@@ -8,37 +9,21 @@ const footerLinks = [
 
 export default function Dfooter() {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#d6edf8] to-[#c2e2f5] border-t border-[#b8d8ef]">
+    <footer className="w-full bg-gradient-to-b from-[#d6edf8] to-[#c2e2f5] border-t border-[#b8d8ef] shadow-sm">
       {/* Top Row */}
-      <div className="flex items-center justify-between px-12 py-5">
+      <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-4 sm:px-12 sm:py-5">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
-          <div className="w-10 h-10 flex items-center justify-center text-2xl shrink-0">
-            ⚔️
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span
-              className="font-bold text-[#1e3a5f] text-[13px] tracking-[2px] uppercase"
-              style={{ fontFamily: "Rajdhani, sans-serif" }}
-            >
-              English
-            </span>
-            <span
-              className="font-semibold text-[#1e3a5f] text-[11px] tracking-[2px] uppercase"
-              style={{ fontFamily: "Rajdhani, sans-serif" }}
-            >
-              Commando
-            </span>
-          </div>
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="English Commando Logo" className="h-12 w-auto" />
         </a>
 
         {/* Links */}
-        <nav className="flex items-center gap-8">
+        <nav className="flex flex-wrap items-center justify-center gap-6 text-[11.5px] font-semibold uppercase tracking-wide text-[#4a6a8a] sm:gap-8 sm:text-sm">
           {footerLinks.map((link) => (
             <a
               key={link}
               href="#"
-              className="text-[11.5px] font-semibold tracking-wide uppercase text-[#4a6a8a] hover:text-[#1e3a5f] transition-colors duration-150"
+              className="transition-colors duration-150 hover:text-[#1e3a5f]"
             >
               {link}
             </a>
@@ -47,10 +32,8 @@ export default function Dfooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#b0d0e8] py-3 px-12 text-center">
-        <span className="text-[12.5px] text-[#6a8aaa]">
-          © 2026 The Commanders. All rights reserved.
-        </span>
+      <div className="border-t border-[#b0d0e8] py-3 px-6 text-center text-[12.5px] text-[#6a8aaa] sm:px-12">
+        © 2026 The Commanders. All rights reserved.
       </div>
     </footer>
   );

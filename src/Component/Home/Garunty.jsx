@@ -8,7 +8,7 @@ const description =
 
 const Garunty = () => {
   return (
-    <section className="bg-white px-4 py-14 font-sans sm:px-8 sm:py-20">
+    <section className="bg-[#e2f2fc] px-4 py-14 font-sans sm:px-8 sm:py-20">
       <div className="mx-auto max-w-5xl rounded-3xl border border-[#b8f0d6] bg-white px-6 py-12 text-center shadow-[0_16px_28px_rgba(15,23,42,0.10)] sm:px-12 sm:py-14">
         <svg
           viewBox="0 0 64 64"

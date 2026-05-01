@@ -8,7 +8,7 @@ const subtitle =
 
 const Fluency = () => {
   return (
-    <section className="bg-white px-4 py-14 font-sans sm:px-8 sm:py-20">
+    <section className="bg-[#e2f2fc] px-4 py-14 font-sans sm:px-8 sm:py-20">
       <div className="mx-auto max-w-5xl text-center">
         <h2 className="text-2xl font-black leading-tight tracking-normal text-[#082447] sm:text-4xl">
           {title}

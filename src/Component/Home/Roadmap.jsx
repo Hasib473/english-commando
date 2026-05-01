@@ -59,7 +59,7 @@ const RoadmapIcon = ({ type }) => {
 
 const Roadmap = () => {
   return (
-    <section className="bg-[#f8f9ff] px-4 py-14 font-sans sm:px-8 sm:py-20">
+    <section className="bg-[#e2f2fc] px-4 py-14 font-sans sm:px-8 sm:py-20">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-2xl font-black leading-tight tracking-normal text-[#082447] sm:text-4xl">
           {roadmapTitle}
